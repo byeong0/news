@@ -1,0 +1,214 @@
+/*
+ * Lanyon Theme Styles
+ * Based on Poole theme
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: "PT Serif", Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #515151;
+  background-color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+a {
+  color: #268bd2;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.wrap {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.masthead {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.masthead-title {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+}
+
+.masthead-title a {
+  color: #505050;
+}
+
+.masthead-title small {
+  font-size: 75%;
+  font-weight: 400;
+  color: #c0c0c0;
+  letter-spacing: 0;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.content {
+  margin-bottom: 4rem;
+}
+
+.post {
+  margin-bottom: 4rem;
+}
+
+.post-title {
+  margin-bottom: 0.5rem;
+}
+
+.post-title a {
+  color: #505050;
+}
+
+.post-date {
+  display: block;
+  margin-bottom: 1rem;
+  color: #9a9a9a;
+  font-size: 0.9rem;
+}
+
+.page-title {
+  margin-bottom: 2rem;
+}
+
+/* Sidebar */
+.sidebar-checkbox {
+  display: none;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -14rem;
+  width: 14rem;
+  height: 100%;
+  background: #202020;
+  color: #fff;
+  transition: left 0.3s ease;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.sidebar-sticky {
+  padding: 1rem;
+}
+
+.sidebar-about {
+  margin-bottom: 2rem;
+}
+
+.sidebar-about h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-about h1 a {
+  color: #fff;
+}
+
+.sidebar-about .lead {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.sidebar-nav {
+  margin-bottom: 2rem;
+}
+
+.sidebar-nav-item {
+  display: block;
+  color: #ccc;
+  padding: 0.5rem 0;
+  text-decoration: none;
+}
+
+.sidebar-nav-item:hover,
+.sidebar-nav-item.active {
+  color: #fff;
+}
+
+.sidebar-toggle {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  background: #202020;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 3px;
+  z-index: 2000;
+  font-size: 0.9rem;
+}
+
+.sidebar-toggle:hover {
+  background: #303030;
+}
+
+.sidebar-checkbox:checked ~ .sidebar {
+  left: 0;
+}
+
+.sidebar-checkbox:checked ~ .content {
+  margin-left: 14rem;
+}
+
+.sidebar a {
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 48em) {
+  .masthead-title {
+    font-size: 1.5rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+

@@ -37,6 +37,7 @@ def generate_news():
     # 현재 날짜
     now = datetime.datetime.now()
     date_string = now.strftime("%Y-%m-%d")
+    year_month = now.strftime("%Y%m")  # 년월 형식 (예: 202511)
     
     # 프롬프트 템플릿 로드
     prompt = load_prompt_template(date_string)
@@ -55,12 +56,16 @@ def generate_news():
         script_dir = Path(__file__).parent
         project_root = script_dir.parent
         
-        # Jekyll 포스트 파일 생성
+        # Jekyll 포스트 기본 디렉토리
         posts_dir = project_root / "_posts"
         posts_dir.mkdir(exist_ok=True)
         
+        # 년월 기준 하위 디렉토리 생성
+        year_month_dir = posts_dir / year_month
+        year_month_dir.mkdir(exist_ok=True)
+        
         # 파일명 형식: YYYY-MM-DD-ai-news.md
-        post_filename = posts_dir / f"{date_string}-ai-news.md"
+        post_filename = year_month_dir / f"{date_string}-ai-news.md"
         
         # Jekyll 포스트 프론트매터 추가
         frontmatter = f"""---
@@ -84,4 +89,3 @@ categories: news
 
 if __name__ == "__main__":
     generate_news()
-

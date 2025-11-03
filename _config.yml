@@ -11,15 +11,28 @@ author:
 
 # Build settings
 markdown: kramdown
-theme: minima
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
+permalink: pretty
+paginate: 5
+paginate_path: "/page:num/"
+sass:
+  style: compressed
+  sourcemap: never
+
+# 포스트 설정
+include: ["_posts/**/*"]
+collections_dir: _posts
+permalink: /:categories/:year/:month/:day/:title/
 
 # Lanyon theme settings
 lanyon_version: "2.0.0"
-github:
-  repo: https://github.com/byeong0/news
+#github:
+#  repo: https://github.com/byeong0/news
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate
 
 # Exclude from processing
 exclude:
@@ -28,4 +41,4 @@ exclude:
   - Gemfile.lock
   - node_modules
   - vendor
-
+  - .bundle

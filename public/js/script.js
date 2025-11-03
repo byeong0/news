@@ -1,4 +1,3 @@
-// Sidebar toggle
 (function(document) {
   var toggle = document.querySelector('.sidebar-toggle');
   var sidebar = document.querySelector('#sidebar');
@@ -6,7 +5,7 @@
 
   document.addEventListener('click', function(e) {
     var target = e.target;
-    
+
     if(!checkbox.checked ||
        sidebar.contains(target) ||
        (target === checkbox || target === toggle)) return;

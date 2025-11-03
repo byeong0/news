@@ -34,9 +34,11 @@ def generate_news():
     
     client = OpenAI(api_key=api_key)
     
-    # 현재 날짜
+    # 현재 날짜 및 시간
     now = datetime.datetime.now()
     date_string = now.strftime("%Y-%m-%d")
+    datetime_string = now.strftime("%Y-%m-%d-%H%M%S")
+    time_string = now.strftime("%H:%M:%S")
     year_month = now.strftime("%Y%m")  # 년월 형식 (예: 202511)
     
     # 프롬프트 템플릿 로드
@@ -64,14 +66,14 @@ def generate_news():
         year_month_dir = posts_dir / year_month
         year_month_dir.mkdir(exist_ok=True)
         
-        # 파일명 형식: YYYY-MM-DD-ai-news.md
-        post_filename = year_month_dir / f"{date_string}-ai-news.md"
+        # 파일명 형식: YYYY-MM-DD-HH24MISS-ai-news.md
+        post_filename = year_month_dir / f"{datetime_string}-ai-news.md"
         
         # Jekyll 포스트 프론트매터 추가
         frontmatter = f"""---
 layout: post
 title: "{date_string} AI 뉴스"
-date: {date_string} 09:00:00 +0900
+date: {date_string} {time_string} +0900
 categories: news
 ---
 

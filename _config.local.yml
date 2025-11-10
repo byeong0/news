@@ -1,0 +1,3 @@
+# Local development settings that override _config.yml
+url: http://localhost:4000
+baseurl: ''

@@ -2,16 +2,16 @@
 title:               AI News Blog
 tagline:             'AI News Blog'
 description:         'AI News Blog'
-url:                 https://byeong0.github.io/news/
+url:                 https://www.newsmind.ai.kr
 baseurl:             ''
 paginate:            5
-permalink:           pretty
+permalink:           :year/:month/:day/:title
 
 # About/contact
 author:
   name:              AI News Bot
   url:               https://byeong0.github.io/news/
-  email:             byeong0@gmail.com
+  email:             byeong0gmail.com
 
 # Gems
 plugins:

@@ -13,7 +13,7 @@ from openai import OpenAI
 def load_prompt_template(date_string):
     """프롬프트 템플릿 파일을 읽어서 날짜를 채워넣습니다."""
     script_dir = Path(__file__).parent
-    template_path = script_dir / "prompt_template.txt"
+    template_path = script_dir / "prompt_template.md"
     
     try:
         with open(template_path, 'r', encoding='utf-8') as f:

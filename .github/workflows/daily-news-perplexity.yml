@@ -2,8 +2,8 @@ name: Daily AI News (Perplexity)
 
 on:
   schedule:
-    # 매일 한국 시간 오전 9시 (UTC 0시) 실행
-    - cron: '0 0 * * *'
+    # 매일 한국 시간 오후 9시 (UTC 12시) 실행
+    - cron: '0 8 * * *'
   workflow_dispatch:
 
 permissions:

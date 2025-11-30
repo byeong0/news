@@ -31,7 +31,7 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
-          python scripts/generate_news.py
+          python scripts/openai/generate_news.py
 
       - name: Git 설정
         run: |
@@ -41,7 +41,7 @@ jobs:
       - name: 변경사항 커밋 및 푸시
         run: |
           DATE=$(date +%Y-%m-%d)
-          git add _posts/
+          git add _posts/openai/
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else

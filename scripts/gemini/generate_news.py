@@ -87,7 +87,7 @@ def generate_news():
     prompt = load_prompt_template(date_string)
     
     try:
-        model_name = "gemini-3-pro-preview"
+        model_name = "gemini-3-flash-preview"
         
         # Tool 설정 (Google Search)
         tools = [
